@@ -10,6 +10,7 @@ const schema = new mongoose.Schema(
         reservePrice: { type: Number, require: true },
         stock: { type: Number, require: true },
         brand_id: { type: mongoose.Types.ObjectId, ref: 'brands', required: true },
+        category_id: { type: mongoose.Types.ObjectId, ref: 'categories', required: true },
     },{
         timestamps: true
     }

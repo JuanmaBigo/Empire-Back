@@ -4,10 +4,6 @@ export let categories = [
     },{
         name: "SUV",
     },{
-        name: "luxury sedan",
-    },{
-        name: "sports car",
-    },{
         name: "hyper car",
     }
 ]
