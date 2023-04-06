@@ -8,8 +8,8 @@ const controller ={
     if(req.query.name){
       query.name = new RegExp(req.query.name.trim(),'i')
     }
-    if(req.query.category){
-      query.category_id = req.query.category.split(",")
+    if(req.query.category_id){
+      query.category_id = req.query.category_id.split(",")
     }
 
     let car = await Car.find(query)
