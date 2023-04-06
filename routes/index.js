@@ -1,4 +1,5 @@
 import express from 'express';
+import carRouter from "./cars.js"
 // import userRouter from './users.js'
 
 
@@ -9,6 +10,7 @@ router.get('/', function (req, res, next) {
   res.render('index', { title: 'Empire Backend' });
 });
 
+router.use("/cars",carRouter)
 
 // en el enrutador principal voy a enrutar todos los recursos
 // es decir voy a llamar y configurar las rutas de usuarios, autos, etc
