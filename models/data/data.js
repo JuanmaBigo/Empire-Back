@@ -2,7 +2,7 @@ import 'dotenv/config.js'
 import '../../config/database.js'
 import { users } from './users.js'
 import { brands } from './brands.js'
-import { cars_v1 } from './cars_v1.js'
+import { cars_v2 } from './cars_v2.js'
 import { categories } from './categories.js'
 import Color from '../Color.js'
 import Category from '../Category.js'
@@ -50,7 +50,7 @@ let data = async () => {
     await newBrands(brands)
     await newUsers(users)
     await newCategories(categories)
-    await newCars(cars_v1)
+    await newCars(cars_v2)
     console.log('done!')
 }
 
