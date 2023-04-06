@@ -5,6 +5,7 @@ const schema = new mongoose.Schema(
         car_id: { type: mongoose.Types.ObjectId, ref: 'cars', required: true },
         name: { type: String, required: true },
         price_color: { type: Number, required: true },
+        color_code: { type: String, required: true },
     },{
         timestamps: true
     }
