@@ -1,10 +1,19 @@
 import Car from "../../models/Car.js";
-
+import Category  from "../../models/Category.js"
 const controller ={
   get_all: async(req,res,next) =>{
 
   try{
-    let car = await Car.find()
+    let query={}
+    if(req.query.name){
+      query.name = new RegExp(req.query.name.trim(),'i')
+    }
+    if(req.query.category_id){
+      query.category_id = req.query.category_id.split(",")
+    }
+
+    let car = await Car.find(query)
+    .populate("category_id")
     console.log(car)
     if (car){
       return res.status(200).json({
