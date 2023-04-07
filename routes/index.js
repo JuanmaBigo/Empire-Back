@@ -1,6 +1,6 @@
 import express from 'express';
+import userRouter from './users.js'
 import carRouter from "./cars.js"
-// import userRouter from './users.js'
 
 
 let router = express.Router();
@@ -16,7 +16,8 @@ router.use("/cars",carRouter)
 // es decir voy a llamar y configurar las rutas de usuarios, autos, etc
 // a traves del metodo .use() le indico al enrutador principal que utilice esas rutas con el endpoint correspondiente
 
-// router.use('/cars', carsRouter)
+router.use("/cars",carRouter)
+router.use("/users",userRouter)
 
 
 
