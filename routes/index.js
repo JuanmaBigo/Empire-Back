@@ -2,6 +2,7 @@ import express from 'express';
 import userRouter from './users.js'
 import carRouter from "./cars.js"
 import rimRouter from "./rims.js"
+import colorRouter from "./colors.js"
 
 
 let router = express.Router();
@@ -16,13 +17,11 @@ router.get('/', function (req, res, next) {
 // a traves del metodo .use() le indico al enrutador principal que utilice esas rutas con el endpoint correspondiente
 
 router.use("/cars",carRouter)
-<<<<<<< HEAD
 router.use("/users",userRouter)
 router.use("/rims",rimRouter)
-=======
 router.use("/auth",userRouter)
+router.use("/colors",colorRouter)
 
->>>>>>> 26deb94f9b4a3590909f7de522c89716d2fe7b80
 
 
 
