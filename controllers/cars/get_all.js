@@ -1,4 +1,5 @@
 import Car from "../../models/Car.js";
+
 import Category  from "../../models/Category.js"
 const controller ={
   get_all: async(req,res,next) =>{
