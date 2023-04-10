@@ -3,6 +3,8 @@ import userRouter from './users.js'
 import carRouter from "./cars.js"
 import rimRouter from "./rims.js"
 import colorRouter from "./colors.js"
+import categoryRouter from "./categories.js"
+import rimRouter from "./rims.js"
 
 
 let router = express.Router();
@@ -21,7 +23,7 @@ router.use("/users",userRouter)
 router.use("/rims",rimRouter)
 router.use("/auth",userRouter)
 router.use("/colors",colorRouter)
-
+router.use("/categories", categoryRouter)
 
 
 

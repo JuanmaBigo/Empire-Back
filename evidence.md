@@ -17,3 +17,9 @@
 ![image](https://user-images.githubusercontent.com/66440535/230480307-ddb7f2ad-94cc-44f2-b21e-25fdb31c28d6.png)
 ![image](https://user-images.githubusercontent.com/66440535/230480331-d3637533-c5c1-4b52-abf2-5911a5975363.png)
 
+/cars/:id
+![image](https://user-images.githubusercontent.com/123500236/230805192-ab2eac58-e4f5-4a8b-8ac4-df14dd70869d.png)
+
+/categories
+![image](https://user-images.githubusercontent.com/123500236/230805166-e35aeb0d-3223-447b-84e2-da3641ffaf0d.png)
+
