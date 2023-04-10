@@ -16,8 +16,13 @@ router.get('/', function (req, res, next) {
 // a traves del metodo .use() le indico al enrutador principal que utilice esas rutas con el endpoint correspondiente
 
 router.use("/cars",carRouter)
+<<<<<<< HEAD
 router.use("/users",userRouter)
 router.use("/rims",rimRouter)
+=======
+router.use("/auth",userRouter)
+
+>>>>>>> 26deb94f9b4a3590909f7de522c89716d2fe7b80
 
 
 
