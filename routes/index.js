@@ -6,6 +6,9 @@ import categoryRouter from "./categories.js"
 import rimRouter from "./rims.js"
 
 
+
+
+
 let router = express.Router();
 
 /* GET home page. */
@@ -18,6 +21,7 @@ router.get('/', function (req, res, next) {
 // a traves del metodo .use() le indico al enrutador principal que utilice esas rutas con el endpoint correspondiente
 
 router.use("/cars",carRouter)
+router.use("/users",userRouter)
 router.use("/rims",rimRouter)
 router.use("/auth",userRouter)
 router.use("/colors",colorRouter)
