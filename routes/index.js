@@ -6,6 +6,9 @@ import categoryRouter from "./categories.js"
 import rimRouter from "./rims.js"
 
 
+
+
+
 let router = express.Router();
 
 /* GET home page. */
