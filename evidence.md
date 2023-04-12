@@ -48,3 +48,4 @@ first we will make a test in postman to tune our model based on what we want the
 
 you will find the text response in: response.data.choices[0].message.content
 
+![image](https://user-images.githubusercontent.com/66440535/231315994-fe8135be-72d7-4cf8-b76e-968d399ee865.png)
