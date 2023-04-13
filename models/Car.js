@@ -4,6 +4,7 @@ const schema = new mongoose.Schema(
     {
         name: {type:String, require: true},
         photo: { type: String, require: true },
+        video: { type: String, require: true },
         description1: { type: String, require: true },
         description2: { type: String, require: true },
         photo_description1: { type: String, require: true },
