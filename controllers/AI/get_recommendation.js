@@ -42,12 +42,17 @@ const controller = {
                 
                 let urlAI = AIResponse.substring(AIResponse.lastIndexOf('https://www.empire.com/models/id='))
                 let recommendationAI = AIResponse.substring(0, AIResponse.lastIndexOf('https://www.empire.com/models/id='))
-                let carId = urlAI.substring(urlAI.lastIndexOf('=') + 1)
+                
+                let carId = (urlAI.substring(urlAI.lastIndexOf('=') + 1)).replace('.','')
+
+                let carRecommended = await Car.findById(carId)
+                
 
                 return res.status(200).json({
                     recommendation: recommendationAI,
                     url: urlAI,
-                    carId: carId
+                    carId: carId,
+                    car: carRecommended
                 })
             } else {
                 return res.status(400).json({
