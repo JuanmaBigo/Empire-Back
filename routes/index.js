@@ -5,6 +5,8 @@ import colorRouter from "./colors.js"
 import categoryRouter from "./categories.js"
 import rimRouter from "./rims.js"
 import itemRouter from "./Items.js"
+import paymentRouter from './payments.js'
+import orderRouter from './orders.js'
 
 
 
@@ -27,6 +29,8 @@ router.use("/auth",userRouter)
 router.use("/colors",colorRouter)
 router.use("/categories", categoryRouter)
 router.use("/items", itemRouter)
+router.use("/payments", paymentRouter)
+router.use("/orders", orderRouter)
 
 
 
