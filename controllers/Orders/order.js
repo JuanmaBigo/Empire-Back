@@ -5,9 +5,10 @@ const controller = {
     
      new_order: async (req, res) => {
         try {
+          console.log(req.body)
           // Crea la orden en la colección de "orders"
           const order = await Order.create(req.body);
-      
+
           // Obtiene los productos del carrito que coincidan con el user_id en la colección de "items"
           const items = await Item.find({ user_id: req.body.user_id });
       
