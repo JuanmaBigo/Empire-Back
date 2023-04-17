@@ -10,7 +10,7 @@ const controller = {
                 user_id: user._id,
                 car_id: req.body.car_id,
                 color_id: req.body.color_id,
-                rim_id: req.body.rim_id
+                rim_id: req.body.rim_id,
             })
             return res
                 .status(201)
@@ -27,13 +27,18 @@ const controller = {
         const { user } = req 
         try {
             let item = await Item.find( { user_id: user._id })
-                .populate("car_id  ")
-                .populate("color_id  ")
-                .populate("rim_id  ")
+                .populate("car_id", "name photo price reservePrice stock")
+                .populate("color_id", "name price_color")
+                .populate("rim_id", "name price_rim photo")
+                // let totalReservation = item?.map((element) => ((element.car_id.reservePrice + element.color_id.price_color + element.rim_id.price_rim)));
+                const total = item.reduce((acc, cur) => acc + cur.car_id.reservePrice + cur.color_id.price_color + cur.rim_id.price_rim, 0)
+                // console.log(" Este es el precio total:  " + totalReservation)
             return res
                 .status(200)
                 .json({
-                    item
+                    item,
+                    // totalReservation,
+                    total
                 })
         } catch (error) {
             next(error)
@@ -59,6 +64,7 @@ const controller = {
     // },
 
     deleteOne: async (req,res,next) => {
+        const { user } = req
         try {
             let item = await Item.deleteOne( {_id: req.params.id, user_id: req.user._id})
             if( item ){

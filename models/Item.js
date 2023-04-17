@@ -2,7 +2,6 @@ import  mongoose  from "mongoose";
 
 const schema = new mongoose.Schema(
     {
-
         user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'users', required: true },
         car_id: { type: mongoose.Schema.Types.ObjectId, ref: 'cars', required: true },
         color_id: { type: mongoose.Schema.Types.ObjectId, ref: 'colors', required: true },
