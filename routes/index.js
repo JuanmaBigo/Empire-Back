@@ -4,6 +4,7 @@ import carRouter from "./cars.js"
 import colorRouter from "./colors.js"
 import categoryRouter from "./categories.js"
 import rimRouter from "./rims.js"
+import itemRouter from "./Items.js"
 
 
 
@@ -25,6 +26,7 @@ router.use("/rims",rimRouter)
 router.use("/auth",userRouter)
 router.use("/colors",colorRouter)
 router.use("/categories", categoryRouter)
+router.use("/items", itemRouter)
 
 
 
