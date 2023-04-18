@@ -10,12 +10,12 @@ const controller = {
       const order = await Order.create(req.body);
 
       // Obtiene los productos del carrito que coincidan con el user_id en la colección de "items"
-      const items = await Item.find({ user_id: req.body.user_id })
-                          .populate("car_id", "name photo price reservePrice stock")
-                          .populate("color_id", "name price_color")
-                          .populate("rim_id", "name price_rim photo")
-                          .exec(); // Agregar exec() para ejecutar la consulta
-                          
+      const items = await Item.find({ user_id: req.body.user_id, bought: false })
+      .populate("car_id", "name photo price reservePrice stock")
+      .populate("color_id", "name price_color")
+      .populate("rim_id", "name price_rim photo")
+      .exec();
+                            
       // Asigna los productos del carrito a la orden
       order.products = items;
   
