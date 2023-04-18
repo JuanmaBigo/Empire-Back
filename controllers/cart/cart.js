@@ -26,10 +26,11 @@ const controller = {
     getAll: async (req,res,next) => {
         const { user } = req 
         try {
-            let item = await Item.find( { user_id: user._id })
-                .populate("car_id", "name photo price reservePrice stock")
-                .populate("color_id", "name price_color")
-                .populate("rim_id", "name price_rim photo")
+            let item = await Item.find({ user_id: user._id, bought: false })
+            .select('-__v')
+            .populate('car_id', 'name photo price reservePrice stock')
+            .populate('color_id', 'name price_color')
+            .populate('rim_id', 'name price_rim photo ');
                 // let totalReservation = item?.map((element) => ((element.car_id.reservePrice + element.color_id.price_color + element.rim_id.price_rim)));
                 const total = item.reduce((acc, cur) => acc + cur.car_id.reservePrice + cur.color_id.price_color + cur.rim_id.price_rim, 0)
                 // console.log(" Este es el precio total:  " + totalReservation)

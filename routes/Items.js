@@ -2,7 +2,7 @@ import express from "express";
 import controller from "../controllers/cart/cart.js";
 import passport from "./../middlewares/passport.js";
 
-const {create, update, getAll, deleteOne, deleteAll} = controller
+const {create, getAll, deleteOne, deleteAll} = controller
 const router = express.Router()
 
 router.post("/", passport.authenticate('jwt',{ session:false }), create)

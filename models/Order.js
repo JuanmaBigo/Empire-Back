@@ -1,5 +1,4 @@
 import  mongoose  from "mongoose";
-import Item from './Item.js'
 
 const orderSchema = new mongoose.Schema({
     user_id: {

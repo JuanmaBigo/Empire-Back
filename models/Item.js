@@ -6,6 +6,7 @@ const schema = new mongoose.Schema(
         car_id: { type: mongoose.Schema.Types.ObjectId, ref: 'cars', required: true },
         color_id: { type: mongoose.Schema.Types.ObjectId, ref: 'colors', required: true },
         rim_id: { type: mongoose.Schema.Types.ObjectId, ref: 'rims', required: true },
+        bought: { type: Boolean, required: false, default: false }
     },
     {
         timestamps: true,
