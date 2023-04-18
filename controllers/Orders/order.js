@@ -6,6 +6,7 @@ const controller = {
     
   new_order: async (req, res) => {
     try {
+      
       // Crea la orden en la colección de "orders"
       const order = await Order.create(req.body);
 

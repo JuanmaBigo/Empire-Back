@@ -13,7 +13,7 @@ const controller = {
             await User.create(req.body)
             const frontRoute = process.env.FRONT
             const message = {
-                from: "facundo2punto0@gmail.com",
+                from: "projectempire9@gmail.com",
                 to: req.body.mail,
                 subject: "Welcome to Empire",
                 text: "Welcome to Empire",
