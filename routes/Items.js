@@ -7,7 +7,7 @@ const router = express.Router()
 
 router.post("/", passport.authenticate('jwt',{ session:false }), create)
 router.get("/", passport.authenticate('jwt',{ session:false }), getAll)
-router.put("/", passport.authenticate('jwt',{ session:false }), deleteOne)
+router.put("/:id", deleteOne)
 router.put("/", passport.authenticate('jwt',{ session:false }), deleteAll)
 
 

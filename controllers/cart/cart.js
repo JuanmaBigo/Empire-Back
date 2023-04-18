@@ -67,7 +67,7 @@ const controller = {
     deleteOne: async (req,res,next) => {
         const { user } = req
         try {
-            let item = await Item.deleteOne( {_id: req.params.id, user_id: req.user._id})
+            let item = await Item.deleteOne( {_id: req.params.id})
             if( item ){
                 return res
                     .status(200)
