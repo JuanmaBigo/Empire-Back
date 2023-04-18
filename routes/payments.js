@@ -8,7 +8,6 @@ mercadopago.configure({ access_token: process.env.MERCADOPAGO_KEY })
 
 router.post("/", passport.authenticate('jwt', { session: false }), (req, res) => {
     const pay = req.body
-console.log(pay)
     let preference = {
         items: [ {
             id: 123,
