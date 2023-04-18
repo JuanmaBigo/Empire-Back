@@ -24,6 +24,11 @@
 ![image](https://user-images.githubusercontent.com/123500236/230805166-e35aeb0d-3223-447b-84e2-da3641ffaf0d.png)
 
 /cars/AI
+![image](https://user-images.githubusercontent.com/66440535/231315994-fe8135be-72d7-4cf8-b76e-968d399ee865.png)
+
+/add_stock to be able to update car's stock
+middleware is_admin to only let pass to admin users
+![image](https://user-images.githubusercontent.com/66440535/232559405-c5a83a60-8f78-4de6-933a-6accde2e0d33.png)
 
 
 # OPEN AI CHAT GPT API

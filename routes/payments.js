@@ -20,9 +20,9 @@ router.post("/", passport.authenticate('jwt', { session: false }), (req, res) =>
             unit_price: pay.price,
         }],
         back_urls: {
-            success: 'http://localhost:3000/completed-purchase',
-            failure: 'http://localhost:3000/cart',
-            pending: 'http://localhost:3000/cart',
+            success: 'https://empire-project.netlify.app/completed-purchase',
+            failure: 'https://empire-project.netlify.app/',
+            pending: 'https://empire-project.netlify.app/',
         },
         auto_return: "approved",
         binary_mode: true,
