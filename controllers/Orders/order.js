@@ -23,27 +23,27 @@ const controller = {
             success: true,
             order
           })
-          const message = {
-            from: "facundo2punto0@gmail.com",
-            to: req.body.mail,
-            subject: "Empire",
-            text: "Thank you for your purchase",
-            html: `<p><br>We contact you to tell you that your order has been accepted and your dream car is waiting for you at the dealership. <br>
-                    <br> Thank you for using our customization services <br> 
-                    <p style="color: grey;">--<br>
-                    Kind regards,<br>
-                    Empire's team<br>
-                    Empire.app@gmail.com<br>
-                    www.Empire.com<br>
-                    <br>
-                    Thanks for using our app! If you have any questions or suggestions, please do not hesitate to contact us.<br>
-                    <br>
-                    Empire App</p>`
-            }
-            await transporter.sendMail(message)
-            
-          await Item.deleteMany({ user_id: order.user_id });
+          
 
+          await Item.deleteMany({ user_id: order.user_id });
+          const message = {
+              from: "facundo2punto0@gmail.com",
+              to: req.body.mail,
+              subject: "Empire",
+              text: "Thank you for your purchase",
+              html: `<p><br>We contact you to tell you that your order has been accepted and your dream car is waiting for you at the dealership. <br>
+                      <br> Thank you for using our customization services <br> 
+                      <p style="color: grey;">--<br>
+                      Kind regards,<br>
+                      Empire's team<br>
+                      Empire.app@gmail.com<br>
+                      www.Empire.com<br>
+                      <br>
+                      Thanks for using our app! If you have any questions or suggestions, please do not hesitate to contact us.<br>
+                      <br>
+                      Empire App</p>`
+              }
+              await transporter.sendMail(message)
 
 
         } catch (error) {
