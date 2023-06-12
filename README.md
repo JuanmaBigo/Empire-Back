@@ -13,5 +13,6 @@ Integrations:
 - [OpenAI API](https://openai.com/product) (for making car recommendations based on stock and user preferences)
 - [MercadoPago API](https://www.mercadopago.com.ar/developers/en/reference) (for making reserve payments)
 
-## Front End Repo
-[Empire-Front](https://github.com/JuanmaBigo/Empire-Front)
+<br>
+
+for additional info visit the Front End repo: [Empire-Front](https://github.com/JuanmaBigo/Empire-Front)
